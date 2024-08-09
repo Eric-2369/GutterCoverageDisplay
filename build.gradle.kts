@@ -12,6 +12,7 @@ repositories {
 
 intellij {
     version.set("2024.1")
+    plugins.set(listOf("Git4Idea"))
 }
 
 dependencies {

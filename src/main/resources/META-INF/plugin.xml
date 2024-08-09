@@ -5,14 +5,16 @@
     <vendor email="admin@eri.cx" url="https://eri.cx">Eric2369</vendor>
 
     <description>
-        A simple IntelliJ IDEA plugin to display a message.
+        A simple IntelliJ IDEA plugin to display and toggle coverage data in the gutter, specifically for the repository
+        'git@github.com:techops-e2ecs/psa-sfdx.git'.
     </description>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
 
     <actions>
-        <action id="cx.eri.gutter-coverage-display.ShowMessageAction"
-                class="cx.eri.guttercoveragedisplay.ShowMessageAction" text="Show Message">
+        <action id="cx.eri.gutter-coverage-display.ToggleCoverageDataAction"
+                class="cx.eri.guttercoveragedisplay.ToggleCoverageDataAction" text="Toggle Coverage Data">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>
