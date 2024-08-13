@@ -27,6 +27,18 @@ dependencies {
 }
 
 tasks {
+    patchPluginXml {
+        changeNotes.set(
+            """
+            <h2>Version 1.0.1</h2>
+            <ul>
+                <li>Updated plugin icon.</li>
+                <li>Improved plugin description.</li>
+            </ul>
+        """
+        )
+    }
+
     publishPlugin {
         token.set(System.getenv("INTELLIJ_PUBLISH_TOKEN"))
         channels.set(listOf("default"))

@@ -1,14 +1,30 @@
-<idea-plugin>
+<idea-plugin require-restart="false">
     <id>cx.eri.gutter-coverage-display</id>
     <name>Gutter Coverage Display</name>
     <version>1.0.0</version>
+    <idea-version since-build="241"/>
     <vendor email="admin@eri.cx" url="https://eri.cx">Eric2369</vendor>
 
-    <description>
-        A simple IntelliJ-based plugin to display and toggle coverage data in the gutter, specifically for the
-        repository
-        'git@github.com:techops-e2ecs/psa-sfdx.git'.
-    </description>
+    <description><![CDATA[
+        <p>A simple IntelliJ-based plugin to display and toggle coverage data in the gutter, specifically for the repository
+        <a href="https://github.com/techops-e2ecs/psa-sfdx">psa-sfdx</a>.</p>
+        <p>This plugin allows users to read external coverage JSON files and display the coverage data directly in the gutter of the code editor.</p>
+        <ul>
+            <li>Toggle coverage data visibility</li>
+            <li>Supports custom JSON coverage files</li>
+            <li>Seamless integration with Git</li>
+        </ul>
+        <p>For more information, please visit our website.</p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h2>Initial Release - Version 1.0.0</h2>
+        <ul>
+            <li>Initial release of Gutter Coverage Display plugin.</li>
+            <li>Added feature to read and display coverage data from external JSON files.</li>
+            <li>Implemented toggle functionality for coverage data visibility.</li>
+        </ul>
+    ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>Git4Idea</depends>
