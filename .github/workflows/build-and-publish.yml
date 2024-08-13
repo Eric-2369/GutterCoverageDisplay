@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-push:
+  build-and-publish:
     runs-on: ubuntu-22.04
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Build Plugin
-        run: ./gradlew build
+        run: ./gradlew buildPlugin
 
       - name: Publish Plugin
         run: ./gradlew publishPlugin
