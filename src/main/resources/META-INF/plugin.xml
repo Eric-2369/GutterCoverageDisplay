@@ -5,7 +5,8 @@
     <vendor email="admin@eri.cx" url="https://eri.cx">Eric2369</vendor>
 
     <description>
-        A simple IntelliJ IDEA plugin to display and toggle coverage data in the gutter, specifically for the repository
+        A simple IntelliJ-based plugin to display and toggle coverage data in the gutter, specifically for the
+        repository
         'git@github.com:techops-e2ecs/psa-sfdx.git'.
     </description>
 
