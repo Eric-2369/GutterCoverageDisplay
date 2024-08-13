@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cx.eri.guttercoveragedisplay"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -26,6 +26,14 @@ dependencies {
     }
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks {
+    publishPlugin {
+        token.set(System.getenv("INTELLIJ_PUBLISH_TOKEN"))
+        channels.set(listOf("default"))
+        hidden.set(true)
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 }
