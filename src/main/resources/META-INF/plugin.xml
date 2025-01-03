@@ -1,7 +1,7 @@
 <idea-plugin require-restart="false">
     <id>cx.eri.gutter-coverage-display</id>
     <name>Gutter Coverage Display</name>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <idea-version since-build="241"/>
     <vendor email="admin@eri.cx" url="https://eri.cx">Eric2369</vendor>
 
@@ -14,10 +14,19 @@
             <li>Supports custom JSON coverage files</li>
             <li>Seamless integration with Git</li>
         </ul>
-        <p>For more information, please visit our website.</p>
+        <p>For more information, please visit our <a href="https://github.com/Eric-2369/GutterCoverageDisplay">project page</a>.</p>
     ]]></description>
 
     <change-notes><![CDATA[
+        <h2>Version 1.0.2</h2>
+        <ul>
+            <li>Upgraded dependencies to ensure compatibility with IntelliJ IDEA 2024.3.</li>
+        </ul>
+        <h2>Version 1.0.1</h2>
+        <ul>
+            <li>Updated plugin icon.</li>
+            <li>Improved plugin description.</li>
+        </ul>
         <h2>Initial Release - Version 1.0.0</h2>
         <ul>
             <li>Initial release of Gutter Coverage Display plugin.</li>
@@ -31,7 +40,8 @@
 
     <actions>
         <action id="cx.eri.gutter-coverage-display.ToggleCoverageDataAction"
-                class="cx.eri.guttercoveragedisplay.ToggleCoverageDataAction" text="Toggle Coverage Data">
+                class="cx.eri.guttercoveragedisplay.ToggleCoverageDataAction" text="Toggle Coverage Data"
+                icon="AllIcons.Toolwindows.ToolWindowCoverage">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>

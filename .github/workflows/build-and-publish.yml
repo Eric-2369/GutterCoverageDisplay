@@ -2,29 +2,37 @@ name: Build and Publish Plugin
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_plugin:
+        description: 'Publish Plugin'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   build-and-publish:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
+          java-package: 'jdk'
           check-latest: false
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Build Plugin
         run: ./gradlew buildPlugin
 
       - name: Publish Plugin
+        if: ${{ fromJSON(github.event.inputs.publish_plugin) }}
         run: ./gradlew publishPlugin
         env:
           INTELLIJ_PUBLISH_TOKEN: ${{ secrets.INTELLIJ_PUBLISH_TOKEN }}
