@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "cx.eri.guttercoveragedisplay"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.google.code.gson:gson:2.11.0")
+    implementation("com.google.code.gson:gson:2.12.1")
 
     intellijPlatform {
         create("IC", "2024.2")
@@ -40,6 +40,10 @@ intellijPlatform {
             <p>For more information, please visit our <a href="https://github.com/Eric-2369/GutterCoverageDisplay">project page</a>.</p>
             """.trimIndent()
         changeNotes = """
+            <h2>Version 1.0.3</h2>
+            <ul>
+                <li>Updated Gson library.</li>
+            </ul>
             <h2>Version 1.0.2</h2>
             <ul>
                 <li>Updated dependencies to ensure compatibility with IntelliJ IDEA 2024.2.</li>
