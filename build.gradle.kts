@@ -1,10 +1,10 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij.platform") version "2.2.1"
+    id("org.jetbrains.intellij.platform") version "2.4.0"
 }
 
 group = "cx.eri.guttercoveragedisplay"
-version = "1.0.3"
+version = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.12.1")
 
     intellijPlatform {
-        create("IC", "2024.2")
+        create("IC", "2024.3")
         bundledPlugins("Git4Idea")
     }
 }
@@ -40,6 +40,11 @@ intellijPlatform {
             <p>For more information, please visit our <a href="https://github.com/Eric-2369/GutterCoverageDisplay">project page</a>.</p>
             """.trimIndent()
         changeNotes = """
+            <h2>Version 1.0.4</h2>
+            <ul>
+                <li>Updated dependencies to ensure compatibility with IntelliJ IDEA 2024.3.</li>
+                <li>Increased the minimum supported version to IntelliJ IDEA 2024.3.</li>
+            </ul>
             <h2>Version 1.0.3</h2>
             <ul>
                 <li>Updated Gson library.</li>
@@ -67,7 +72,7 @@ intellijPlatform {
             url = "https://eri.cx"
         }
         ideaVersion {
-            sinceBuild = "242"
+            sinceBuild = "243"
             untilBuild = provider { null }
         }
     }
